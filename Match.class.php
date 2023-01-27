@@ -64,7 +64,7 @@ class Match {
 
     // Puts the winner in the array
     // Set third_place parameter only in the semi-final round
-    public function setWinners(object $match, &$winner, &$third_place = []) {
+    public static function setWinners(object $match, &$winner, &$third_place = []) {
         // Team_1 is the winner
         if( $match->getGoal_team_1() > $match->getGoal_team_2() ){
             is_array($winner) ? array_push($winner, $match->getTeam_1()) : $winner = $match->getTeam_1();
